@@ -1,12 +1,12 @@
 {
-    "name": "dmitrybubyakin/nova-medialibrary-field",
+    "name": "build-online/nova-medialibrary-field",
     "description": "Laravel Nova field for managing the Spatie media library.",
     "keywords": [
         "laravel",
         "nova",
         "medialibrary"
     ],
-    "homepage": "https://github.com/dmitrybubyakin/nova-medialibrary-field",
+    "homepage": "https://github.com/build-online/nova-medialibrary-field",
     "license": "MIT",
     "authors": [
         {
