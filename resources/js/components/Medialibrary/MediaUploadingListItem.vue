@@ -99,6 +99,8 @@ export default {
 
   created() {
     this.loadPreview()
+
+    console.log(this.media)
   },
 
   methods: {
