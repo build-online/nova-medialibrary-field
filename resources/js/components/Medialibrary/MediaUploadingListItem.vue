@@ -1,8 +1,8 @@
 <template>
-  <div v-tooltip="tooltip" class="relative group flex w-16 h-16 bg-50 rounded-full overflow-hidden" :class="{ 'shadow-danger': media.uploadingFailed }">
+  <div v-tooltip="tooltip" class="relative group flex w-24 h-24 bg-50 rounded-full overflow-hidden" :class="{ 'shadow-danger': media.uploadingFailed }">
     <loader v-if="previewLoading" class="text-60" :width="30" />
-    <img v-if="preview" :src="preview" :alt="media.fileName" class="w-16 h-16 object-cover" :class="{ 'group-hover:opacity-75': !media.uploading }">
-    <div v-if="!previewLoading && !preview" class="w-16 h-16 flex items-center justify-center" :class="{ 'group-hover:hidden': !media.uploading }">
+    <img v-if="preview" :src="preview" :alt="media.fileName" class="w-24 h-24 object-cover" :class="{ 'group-hover:opacity-75': !media.uploading }">
+    <div v-if="!previewLoading && !preview" class="w-24 h-24 flex items-center justify-center" :class="{ 'group-hover:hidden': !media.uploading }">
       {{ media.extension }}
     </div>
 
@@ -105,7 +105,7 @@ export default {
 
   methods: {
     loadPreview() {
-      if (this.media.isImage) {
+      if (['image/jpeg', 'image/png'].includes(this.media.mimeType)) {
         this.preview = this.media.previewUrl
       } else {
         return
