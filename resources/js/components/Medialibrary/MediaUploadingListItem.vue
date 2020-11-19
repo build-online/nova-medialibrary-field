@@ -61,7 +61,15 @@ export default {
     errorsHtml() {
       return this.media.validationErrors
         .get('file')
-        .map(error => `<span class="text-danger">${error}</span>`)
+        .map(error => {
+          if (typeof error == 'string') {
+            return `<span class="text-danger">${error}</span>`
+          }
+
+          return Object.values(error)
+            .map(e => `<span class="text-danger">${e}</span>`)
+            .join('<br>')
+        })
         .join('<br>')
     },
 
