@@ -2,8 +2,8 @@
   <panel-item :field="field">
     <div slot="value" class="flex flex-wrap -m-2">
       <div v-for="(url, name) in conversions" :key="name" v-tooltip="tooltip(name)">
-        <div class="relative group flex m-2 rounded-full overflow-hidden">
-          <img :src="url" :alt="name" class="w-16 h-16 object-cover">
+        <div class="relative group flex m-2 rounded-lg overflow-hidden">
+          <img :src="url" :alt="name" class="w-24 h-24 object-cover">
           <div class="group-hover:block hidden absolute pin bg-overlay">
             <div class="flex items-center justify-center h-full">
               <button type="button" class="flex text-white hover:text-primary focus:outline-none" @click="copy(url)">
@@ -12,7 +12,9 @@
             </div>
           </div>
         </div>
-        <div class="text-xs text-center">{{ name }}</div>
+        <div class="text-xs text-center uppercase font-bold tracking-wider text-80">
+          {{ name }}
+        </div>
       </div>
     </div>
   </panel-item>
