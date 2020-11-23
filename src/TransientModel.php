@@ -74,27 +74,27 @@ class TransientModel extends Model implements HasMedia
         return [$value['target'], $value['collectionName']];
     }
 
-    public function registerAllMediaConversions(Media $media = null): void
-    {
-        [$modelClassName, $collectionName] = $this->getCustomPropertyValue($media);
+    // public function registerAllMediaConversions(Media $media = null): void
+    // {
+        // [$modelClassName, $collectionName] = $this->getCustomPropertyValue($media);
 
-        if (is_null($modelClassName)) {
-            return;
-        }
+        // if (is_null($modelClassName)) {
+        //     return;
+        // }
 
-        $model = new $modelClassName;
+        // $model = new $modelClassName;
 
-        $model->registerAllMediaConversions($media);
+        // $model->registerAllMediaConversions($media);
 
-        $this->mediaConversions = $model->mediaConversions;
-        $this->mediaCollections = $model->mediaCollections;
+        // $this->mediaConversions = $model->mediaConversions;
+        // $this->mediaCollections = $model->mediaCollections;
 
-        foreach ($this->mediaConversions as $conversion) {
-            if (in_array($collectionName, $conversion->getPerformOnCollections())) {
-                $conversion->performOnCollections($media->collection_name);
-            }
+        // foreach ($this->mediaConversions as $conversion) {
+        //     if (in_array($collectionName, $conversion->getPerformOnCollections())) {
+        //         $conversion->performOnCollections($media->collection_name);
+        //     }
 
-            $conversion->nonQueued();
-        }
-    }
+        //     $conversion->nonQueued();
+        // }
+    // }
 }
