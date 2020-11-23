@@ -19,6 +19,7 @@
           fill="transparent"
         />
       </svg>
+      <loader class="text-60" :width="20" />
     </div>
 
     <div v-else class="group-hover:block hidden absolute pin bg-overlay">
