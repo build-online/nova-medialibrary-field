@@ -17,7 +17,7 @@
       </p>
     </div>
 
-    <label :for="'input' + _uid" class="form-file form-file-btn btn btn-default btn-primary">
+    <label v-if="! isUploading" :for="'input' + _uid" class="form-file form-file-btn btn btn-default btn-primary">
       {{ chooseButtonText }}
     </label>
 
@@ -68,6 +68,10 @@ export default {
   computed: {
     mediaToUpload() {
       return this.media.filter(media => !media.uploading)
+    },
+
+    isUploading() {
+      return !! this.media.filter(media => media.uploading).length
     },
 
     chooseButtonText() {
