@@ -41,7 +41,6 @@ export class UploadingMedia {
   }
 
   handleUploadProgress({ loaded, total }) {
-    console.log('Progress', loaded, total)
     this.uploadingProgress = Math.round(loaded / total * 100)
   }
 
