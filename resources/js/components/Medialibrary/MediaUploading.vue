@@ -17,7 +17,7 @@
       </p>
     </div>
 
-    <label v-if="! isUploading" :for="'input' + _uid" class="form-file form-file-btn btn btn-default btn-primary">
+    <label :for="'input' + _uid" class="form-file form-file-btn btn btn-default btn-primary">
       {{ chooseButtonText }}
     </label>
 
