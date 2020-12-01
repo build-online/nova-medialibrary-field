@@ -17,6 +17,12 @@
       </p>
     </div>
 
+    <span
+      v-if="isUploading"
+      class="text-60 text-sm mb-3">
+      Please wait for all media to finish uploading before submitting the form
+    </span>
+
     <label :for="'input' + _uid" class="form-file form-file-btn btn btn-default btn-primary">
       {{ chooseButtonText }}
     </label>
