@@ -17,11 +17,11 @@
       </p>
     </div>
 
-    <span
+    <p
       v-if="isUploading"
-      class="text-60 text-sm mb-3">
-      Please wait for all media to finish uploading before submitting the form
-    </span>
+      class="text-70 text-sm mb-3">
+      <em>Please wait for all media to finish uploading before submitting the form</em>
+    </p>
 
     <label :for="'input' + _uid" class="form-file form-file-btn btn btn-default btn-primary">
       {{ chooseButtonText }}
